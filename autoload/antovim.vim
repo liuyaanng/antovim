@@ -5,6 +5,10 @@ function! antovim#swap()
     let dictionary = g:antovim_definitions
   endif
 
+  if exists('g:custom_antovim_definitions')
+    let dictionary = extend(copy(g:custom_antovim_definitions), dictionary)
+  endif
+
   let word = expand("<cword>") 
 
   for d in dictionary

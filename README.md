@@ -32,7 +32,7 @@ extra lists (so far) are:
 
 ### Extending lists
 
-To extend the global list, simply extend it.  The example below shows how you would add swaps for 'yes', 'no'
+To extend the global list, you can simply extend it.  The example below shows how you would add swaps for 'yes', 'no'
 and 'maybe':
 
 ```vim
@@ -40,4 +40,17 @@ and 'maybe':
 ```
 
 Extending the buffer-specific list is the same, except you use `b:antovim_definitions` instead of
-`g:antovim_definitions`..
+`g:antovim_definitions`.
+
+#### Custom definition lists
+
+Alternatively, you can also define a global `custom_antovim_definitions` variable which the dictionary will be
+extended with at runtime.  You could combine this file type autocommands to add your own definitions per file, eg
+
+```vim
+autocmd FileType javascript let g:custom_antovim_definitions = [
+  \   ['this', 'that']
+  \ ]
+```
+
+You could then stick that in a file and source that file from within your `.vimrc`.
