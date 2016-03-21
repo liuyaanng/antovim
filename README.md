@@ -30,6 +30,8 @@ extra lists (so far) are:
   - css, less
   - html, ejs
 
+Take a look at `[plugin/antovim.vim](https://github.com/jwarby/antovim/blob/master/plugin/antovim.vim)` for the lists.
+
 ### Extending lists
 
 To extend the global list, you can simply extend it.  The example below shows how you would add swaps for 'yes', 'no'
