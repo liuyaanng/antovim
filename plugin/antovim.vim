@@ -7,7 +7,8 @@ let s:keepcpo = &cpo
 set cpo&vim
 
 let g:antovim_definitions = [
-  \   ['true', 'false']
+  \   ['true', 'false'],
+  \   ['True', 'False']
   \ ]
 
 autocmd FileType css,less let b:antovim_definitions = [
@@ -24,7 +25,7 @@ autocmd FileType html,ejs, let b:antovim_definitions = [
 
 command! Antovim call antovim#swap() | silent! call repeat#set("\<Plug>Antovim")
 
-nnoremap <Leader>s :Antovim<cr>
+nnoremap gs :Antovim<cr>
 
 let &cpo = s:keepcpo
 unlet s:keepcpo

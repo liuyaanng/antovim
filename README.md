@@ -17,8 +17,7 @@ The plugin provides a single command, `Antovim`, which will replace the word und
 matching word within a list of substitutions. eg, with your cursor over the word **true**, typing `:Antovim`
 will swap **true** for **false**.
 
-There is also a default mapping of `<leader>s` included by the plugin (the default leader key being `\` unless you
-have remapped it).
+There is also a default mapping of `gs` included by the plugin
 
 ## Lists
 
